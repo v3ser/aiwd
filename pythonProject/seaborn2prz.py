@@ -55,3 +55,17 @@ plt.savefig('pokemon_analysis_kanto.png')
 
 # Wyświetlenie wykresu
 plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+1np.random.seed(345)
+2data = np.random.randint(20, 100, 6)
+3total = sum(data)
+4data_per = data / total * 100
+5explode = (0.2, 0, 0, 0, 0, 0)
+6plt.pie(data_per, explode=explode, labels=[round(i, 2) for i in list(data_per)])
+7circle = plt.Circle((0, 0), 0.7, color='white')
+8p = plt.gcf()
+9p.gca().add_artist(circle)
+10plt.show()
